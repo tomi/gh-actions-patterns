@@ -4,8 +4,8 @@ Skip running a step if the previous step has specific output. For example when d
 
 ## How it works
 
-1. Write both `stdout` and `stderr` also to `output.log` with [`tee`](https://www.man7.org/linux/man-pages/man1/tee.1.html)
-2. Check with [`grep`](https://www.man7.org/linux/man-pages/man1/grep.1.html) if the output contains a specific text and store it as the [output parameter](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-output-parameter) from that step.
+1. Write both `stdout` and `stderr` also to `output.log` with [`tee`](https://linux.die.net/man/1/tee)
+2. Check with [`grep`](https://linux.die.net/man/1/grep) if the output contains a specific text and store it as the [output parameter](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-output-parameter) from that step.
 3. Run the step only if the text was found (value is 0) or not (value is 1)
 
 ## Example
